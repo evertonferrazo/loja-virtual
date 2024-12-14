@@ -31,8 +31,8 @@ public class CategoriaController {
         return categoriaService.inserir(categoria);
     }
 
-    @PutMapping("/{id}")
-    public Categoria alterar(@PathVariable Long id, @RequestBody Categoria categoria){
+    @PutMapping("/")
+    public Categoria alterar(@RequestBody Categoria categoria){
         return categoriaService.alterar(categoria);
     }
 

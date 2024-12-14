@@ -31,8 +31,8 @@ public class PermissaoController {
         return permissaoService.inserir(permissao);
     }
 
-    @PutMapping("/{id}")
-    public Permissao alterar(@PathVariable Long id, @RequestBody Permissao permissao){
+    @PutMapping("/")
+    public Permissao alterar(@RequestBody Permissao permissao){
         return permissaoService.alterar(permissao);
     }
 
