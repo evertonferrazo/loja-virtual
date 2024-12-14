@@ -10,35 +10,35 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.dev.backend.entity.Estado;
-import com.dev.backend.service.EstadoService;
+import com.dev.backend.entity.Pessoa;
+import com.dev.backend.service.PessoaService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/estado")
-public class EstadoController {
+@RequestMapping("/api/pessoa")
+public class PessoaController {
     
     @Autowired
-    private EstadoService estadoService;
+    private PessoaService pessoaService;
     
     @GetMapping("/")
-    public List<Estado> buscarTodos(){
-       return estadoService.buscarTodos();
+    public List<Pessoa> buscarTodos(){
+       return pessoaService.buscarTodos();
     }
 
     @PostMapping("/")
-    public Estado inserir(@RequestBody Estado estado){
-        return estadoService.inserir(estado);
+    public Pessoa inserir(@RequestBody Pessoa pessoa){
+        return pessoaService.inserir(pessoa);
     }
 
     @PutMapping("/{id}")
-    public Estado alterar(@PathVariable Long id, @RequestBody Estado estado){
-        return estadoService.alterar(estado);
+    public Pessoa alterar(@PathVariable Long id, @RequestBody Pessoa pessoa){
+        return pessoaService.alterar(pessoa);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> excluir(@PathVariable Long id){
-        estadoService.excluir(id);
+    public ResponseEntity<Void> excluir(@PathVariable("id") Long id){
+        pessoaService.excluir(id);
         return ResponseEntity.ok().build();
     }
 }
