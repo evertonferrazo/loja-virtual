@@ -4,14 +4,14 @@ import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.dev.backend.entity.Categoria;
-import com.dev.backend.repository.Categoriarepository;
+import com.dev.backend.repository.CategoriaRepository;
 import java.util.List;
 
 @Service
 public class CategoriaService {
     
     @Autowired
-    private Categoriarepository categoriaRepository;
+    private CategoriaRepository categoriaRepository;
 
     public List<Categoria> buscarTodos(){
         return categoriaRepository.findAll();

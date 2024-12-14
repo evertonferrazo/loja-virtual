@@ -4,14 +4,14 @@ import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.dev.backend.entity.Marca;
-import com.dev.backend.repository.Marcarepository;
+import com.dev.backend.repository.MarcaRepository;
 import java.util.List;
 
 @Service
 public class MarcaService {
     
     @Autowired
-    private Marcarepository marcaRepository;
+    private MarcaRepository marcaRepository;
 
     public List<Marca> buscarTodos(){
         return marcaRepository.findAll();

@@ -4,14 +4,14 @@ import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.dev.backend.entity.Produto;
-import com.dev.backend.repository.Produtorepository;
+import com.dev.backend.repository.ProdutoRepository;
 import java.util.List;
 
 @Service
 public class ProdutoService {
     
     @Autowired
-    private Produtorepository produtoRepository;
+    private ProdutoRepository produtoRepository;
 
     public List<Produto> buscarTodos(){
         return produtoRepository.findAll();

@@ -3,7 +3,7 @@ package com.dev.backend.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.dev.backend.entity.Estado;
-import com.dev.backend.repository.Estadorepository;
+import com.dev.backend.repository.EstadoRepository;
 import java.util.Date;
 import java.util.List;
 
@@ -11,7 +11,7 @@ import java.util.List;
 public class EstadoService {
     
     @Autowired
-    private Estadorepository estadoRepository;
+    private EstadoRepository estadoRepository;
 
     public List<Estado> buscarTodos(){
         return estadoRepository.findAll();
