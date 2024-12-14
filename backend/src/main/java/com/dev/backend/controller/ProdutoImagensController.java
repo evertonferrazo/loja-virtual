@@ -34,8 +34,8 @@ public class ProdutoImagensController {
         return produtoImagensService.inserir(idProduto, file);
     }
 
-    @PutMapping("/{id}")
-    public ProdutoImagens alterar(@PathVariable Long id, @RequestBody ProdutoImagens objeto){
+    @PutMapping("/")
+    public ProdutoImagens alterar(@RequestBody ProdutoImagens objeto){
         return produtoImagensService.alterar(objeto);
     }
 

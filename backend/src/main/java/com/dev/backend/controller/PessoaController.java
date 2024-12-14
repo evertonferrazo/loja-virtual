@@ -31,8 +31,8 @@ public class PessoaController {
         return pessoaService.inserir(pessoa);
     }
 
-    @PutMapping("/{id}")
-    public Pessoa alterar(@PathVariable Long id, @RequestBody Pessoa pessoa){
+    @PutMapping("/")
+    public Pessoa alterar(@RequestBody Pessoa pessoa){
         return pessoaService.alterar(pessoa);
     }
 

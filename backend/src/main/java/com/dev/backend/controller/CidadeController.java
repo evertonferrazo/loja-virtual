@@ -31,8 +31,8 @@ public class CidadeController {
         return cidadeService.inserir(cidade);
     }
 
-    @PutMapping("/{id}")
-    public Cidade alterar(@PathVariable Long id, @RequestBody Cidade cidade){
+    @PutMapping("/")
+    public Cidade alterar(@RequestBody Cidade cidade){
         return cidadeService.alterar(cidade);
     }
 

@@ -31,8 +31,8 @@ public class ProdutoController {
         return produtoService.inserir(produto);
     }
 
-    @PutMapping("/{id}")
-    public Produto alterar(@PathVariable Long id, @RequestBody Produto produto){
+    @PutMapping("/")
+    public Produto alterar(@RequestBody Produto produto){
         return produtoService.alterar(produto);
     }
 

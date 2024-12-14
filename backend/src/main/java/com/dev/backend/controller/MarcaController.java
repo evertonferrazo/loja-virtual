@@ -31,8 +31,8 @@ public class MarcaController {
         return marcaService.inserir(marca);
     }
 
-    @PutMapping("/{id}")
-    public Marca alterar(@PathVariable Long id, @RequestBody Marca marca){
+    @PutMapping("/")
+    public Marca alterar(@RequestBody Marca marca){
         return marcaService.alterar(marca);
     }
 
