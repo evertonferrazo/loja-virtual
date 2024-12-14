@@ -4,14 +4,14 @@ import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.dev.backend.entity.Permissao;
-import com.dev.backend.repository.PermissaoRepository;
+import com.dev.backend.repository.Permissaorepository;
 import java.util.List;
 
 @Service
 public class PermissaoService {
     
     @Autowired
-    private PermissaoRepository permissaoRepository;
+    private Permissaorepository permissaoRepository;
 
     public List<Permissao> buscarTodos(){
         return permissaoRepository.findAll();

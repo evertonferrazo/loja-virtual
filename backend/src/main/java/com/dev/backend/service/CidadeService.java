@@ -4,14 +4,14 @@ import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.dev.backend.entity.Cidade;
-import com.dev.backend.repository.CidadeRepository;
+import com.dev.backend.repository.Cidaderepository;
 import java.util.List;
 
 @Service
 public class CidadeService {
     
     @Autowired
-    private CidadeRepository cidadeRepository;
+    private Cidaderepository cidadeRepository;
 
     public List<Cidade> buscarTodos(){
         return cidadeRepository.findAll();
